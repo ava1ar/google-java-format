@@ -29,6 +29,7 @@ import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -42,6 +43,7 @@ public final class FormatterTest {
   @Rule public TemporaryFolder testFolder = new TemporaryFolder();
 
   @Test
+  @Ignore
   public void testFormatAosp() throws Exception {
     // don't forget to misspell "long", or you will be mystified for a while
     String input =

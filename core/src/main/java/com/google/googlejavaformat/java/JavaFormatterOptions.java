@@ -30,11 +30,14 @@ import com.google.googlejavaformat.java.javadoc.JavadocOptions;
 @Immutable
 public class JavaFormatterOptions implements JavadocOptions {
 
-  static final int DEFAULT_MAX_LINE_LENGTH = 100;
+  static final int DEFAULT_MAX_LINE_LENGTH = 120;
 
   public enum Style {
 
-    /** The default Google Java Style configuration. */
+    /** The default MLP Java Style configuration */
+    MLP(2),
+
+    /** The Google Java Style configuration. */
     GOOGLE(1),
 
     /** The AOSP-compliant configuration. */
@@ -80,7 +83,7 @@ public class JavaFormatterOptions implements JavadocOptions {
 
   /** A builder for {@link JavaFormatterOptions}. */
   public static class Builder {
-    private Style style = Style.GOOGLE;
+    private Style style = Style.MLP;
 
     private Builder() {}
 

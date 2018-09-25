@@ -31,7 +31,6 @@ final class CommandLineOptions {
   private final ImmutableRangeSet<Integer> lines;
   private final ImmutableList<Integer> offsets;
   private final ImmutableList<Integer> lengths;
-  private final boolean aosp;
   private final boolean version;
   private final boolean help;
   private final boolean stdin;
@@ -63,7 +62,6 @@ final class CommandLineOptions {
     this.lines = lines;
     this.offsets = offsets;
     this.lengths = lengths;
-    this.aosp = aosp;
     this.version = version;
     this.help = help;
     this.stdin = stdin;
@@ -98,11 +96,6 @@ final class CommandLineOptions {
   /** Partial formatting region lengths, paired with {@code offsets}. */
   ImmutableList<Integer> lengths() {
     return lengths;
-  }
-
-  /** Use AOSP style instead of Google Style (4-space indentation). */
-  boolean aosp() {
-    return aosp;
   }
 
   /** Print the version. */
